@@ -253,12 +253,19 @@
   .contact-inner {
     grid-template-columns: 1fr;
     gap: 4rem;
+    text-align: center;
   }
+  .contact-info p { margin: 0 auto; }
+  .contact-cards { align-items: center; }
+  .contact-card { text-align: left; width: 100%; max-width: 450px; }
+  .map-placeholder { height: 300px; }
+  .contact-form-panel { align-self: stretch; }
 }
 
 @media (max-width: 600px) {
   .form-row {
     grid-template-columns: 1fr;
+    gap: 0;
   }
 
   .contact-form-panel {
@@ -267,5 +274,6 @@
 
   .form-title {
     font-size: 1.5rem;
+    margin-bottom: 2rem;
   }
 }

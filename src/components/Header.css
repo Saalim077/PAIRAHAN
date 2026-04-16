@@ -167,8 +167,16 @@
 }
 
 @media (max-width: 900px) {
-  .header { background: rgba(20,20,20,0.95); backdrop-filter: blur(20px); }
+  .header { padding: 1rem 0; background: rgba(20,20,20,0.95); backdrop-filter: blur(20px); }
+  .logo-pairahan { font-size: 1rem; }
+  .logo-design { font-size: 0.6rem; }
   .header__nav { display: none; }
   .header__hamburger { display: flex; }
   .header__mobile-menu.open { display: flex; }
+}
+
+@media (max-width: 480px) {
+  .logo-pairahan { font-size: 0.9rem; }
+  .header__logo-icon svg { width: 36px; height: 36px; }
+  .header__logo { gap: 0.5rem; }
 }

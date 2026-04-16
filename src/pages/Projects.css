@@ -199,10 +199,20 @@
 }
 
 @media (max-width: 768px) {
+  .projects-filter { justify-content: center; gap: 0.5rem; }
+  .filter-btn { padding: 0.5rem 1rem; font-size: 0.8rem; }
   .projects-grid { grid-template-columns: 1fr; }
   .projects-stats__inner { grid-template-columns: repeat(2, 1fr); }
   .projects-stat {
     border-right: 1px solid rgba(255,255,255,0.08);
     border-bottom: 1px solid rgba(255,255,255,0.08);
+    padding: 1.5rem 1rem;
   }
+  .projects-stat:nth-child(2n) { border-right: none; }
+  .projects-stat__value { font-size: 2rem; }
+}
+
+@media (max-width: 480px) {
+  .projects-stats__inner { grid-template-columns: 1fr; }
+  .projects-stat { border-right: none; }
 }

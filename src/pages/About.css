@@ -283,14 +283,26 @@
 }
 
 @media (max-width: 1024px) {
-  .about-overview { grid-template-columns: 1fr; gap: 4rem; }
+  .about-overview { grid-template-columns: 1fr; gap: 4rem; text-align: center; }
+  .divider { margin-left: auto; margin-right: auto; }
+  .about-overview__text { order: 1; }
+  .about-overview__stats { order: 2; }
   .mission-cards { grid-template-columns: 1fr; }
   .values-grid { grid-template-columns: repeat(2, 1fr); }
   .team-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 768px) {
-  .about-overview__stats { grid-template-columns: 1fr; }
+  .about-overview__stats { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+  .org-stat { padding: 1.5rem 1rem; }
+  .org-stat__value { font-size: 1.8rem; }
+  .mission-card { padding: 3rem 1.5rem; }
   .values-grid { grid-template-columns: 1fr; }
   .team-grid { grid-template-columns: 1fr; }
+  .about-team { padding: 5rem 0; }
+}
+
+@media (max-width: 480px) {
+  .about-overview__stats { grid-template-columns: 1fr; }
+  .org-stat__icon { font-size: 2rem; }
 }

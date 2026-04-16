@@ -308,15 +308,33 @@ img { max-width: 100%; height: auto; display: block; }
 ::-webkit-scrollbar-thumb { background: var(--color-primary); border-radius: 4px; }
 
 /* ===== Responsive ===== */
+@media (max-width: 1024px) {
+  html { font-size: 15px; }
+  .grid-3 { grid-template-columns: repeat(2, 1fr); }
+  .grid-4 { grid-template-columns: repeat(2, 1fr); }
+}
+
 @media (max-width: 768px) {
-  .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
-  .container { padding: 0 1.25rem; }
-  .section { padding: 4rem 0; }
-  h1 { font-size: 2.4rem; }
-  h2 { font-size: 1.9rem; }
+  html { font-size: 14px; }
+  .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; gap: 2rem; }
+  .container { padding: 0 1.5rem; }
+  .section { padding: 5rem 0; }
+  .section-sm { padding: 3rem 0; }
+  h1 { font-size: 2.8rem; }
+  h2 { font-size: 2.2rem; }
+  h3 { font-size: 1.6rem; }
+  
+  .btn {
+    padding: 0.75rem 1.75rem;
+    font-size: 0.9rem;
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 @media (max-width: 480px) {
-  h1 { font-size: 2rem; }
-  h2 { font-size: 1.6rem; }
+  .container { padding: 0 1.25rem; }
+  h1 { font-size: 2.4rem; }
+  h2 { font-size: 1.8rem; }
+  .section { padding: 4rem 0; }
 }
