@@ -32,10 +32,10 @@ export default function Header() {
         <Link to="/" className="header__logo" id="nav-logo">
           <div className="header__logo-icon">
             <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="44" height="44" rx="8" fill="#2E7D32"/>
-              <path d="M8 34L16 12L22 26L28 18L36 34H8Z" fill="none" stroke="#A2D149" strokeWidth="2.5" strokeLinejoin="round"/>
-              <path d="M22 14L28 6" stroke="#ffffff" strokeWidth="2.5" strokeLinecap="round"/>
-              <rect x="25" y="4" width="6" height="6" rx="1" fill="#A2D149"/>
+              <rect width="44" height="44" rx="8" fill="#2E7D32" />
+              <path d="M8 34L16 12L22 26L28 18L36 34H8Z" fill="none" stroke="#A2D149" strokeWidth="2.5" strokeLinejoin="round" />
+              <path d="M22 14L28 6" stroke="#ffffff" strokeWidth="2.5" strokeLinecap="round" />
+              <rect x="25" y="4" width="6" height="6" rx="1" fill="#A2D149" />
             </svg>
           </div>
           <div className="header__logo-text">
@@ -83,7 +83,7 @@ export default function Header() {
             {label}
           </NavLink>
         ))}
-        <Link to="/contact" className="btn btn-primary" style={{ margin: '1rem 1.5rem' }}>
+        <Link to="/contact" className="btn btn-primary header__mobile-cta" id="nav-cta-mobile">
           Get a Quote
         </Link>
       </div>
