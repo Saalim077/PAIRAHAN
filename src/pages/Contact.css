@@ -85,54 +85,66 @@
 }
 
 /* Map Placeholder */
-.map-placeholder {
-  background: #0a0a0a;
-  border-radius: var(--radius-xl);
-  overflow: hidden;
-  height: 390px;
+/* Map Row Section */
+.contact-map-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: stretch;
+}
+
+.location-info-card {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
-  position: relative;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  border-radius: 20px;
+  padding: 4rem 3rem;
+  background: #fcfcfc;
+  border-radius: var(--radius-xl);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.02);
+  text-align: left;
 }
 
-.map-placeholder::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at 70% 30%, rgba(46, 125, 50, 0.15) 0%, transparent 70%);
-}
-
-.map-placeholder__inner {
-  text-align: center;
-  position: relative;
-  z-index: 1;
-  padding: 2rem;
-}
-
-.map-pin {
-  font-size: 4rem;
-  margin-bottom: 1.5rem;
-  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
+.location-info-card .map-pin {
+  font-size: 3.5rem;
+  margin-bottom: 2rem;
   display: block;
 }
 
-.map-placeholder__inner h4 {
-  color: #fff;
-  font-size: 1.3rem;
+.location-info-content h4 {
+  font-size: 1.8rem;
   font-weight: 800;
-  margin-bottom: 0.75rem;
+  color: var(--color-dark);
+  margin-bottom: 1rem;
 }
 
-.map-placeholder__inner p {
-  color: rgba(255, 255, 255, 0.6);
-  font-size: 1rem;
-  line-height: 1.7;
-  max-width: 300px;
-  margin: 0 auto 2rem;
+.location-info-content p {
+  font-size: 1.1rem;
+  color: var(--color-gray);
+  line-height: 1.8;
+  max-width: 400px;
+}
+
+.map-container {
+  height: 550px;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  background: #f0f0f0;
+}
+
+.map-iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  filter: grayscale(0.1) brightness(0.95) contrast(1.05);
+  transition: filter 0.5s ease;
+}
+
+.map-container:hover .map-iframe {
+  filter: grayscale(0) brightness(1) contrast(1);
 }
 
 /* Form Panel */
@@ -258,7 +270,10 @@
   .contact-info p { margin: 0 auto; }
   .contact-cards { align-items: center; }
   .contact-card { text-align: left; width: 100%; max-width: 450px; }
-  .map-placeholder { height: 300px; }
+  .contact-map-row { grid-template-columns: 1fr; gap: 2rem; }
+  .location-info-card { text-align: center; padding: 3rem 1.5rem; }
+  .location-info-content p { margin: 0 auto 1.5rem; }
+  .map-container { height: 400px; }
   .contact-form-panel { align-self: stretch; }
 }
 

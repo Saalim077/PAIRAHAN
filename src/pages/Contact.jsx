@@ -156,25 +156,6 @@ export default function Contact() {
                   </a>
                 ))}
               </div>
-
-              {/* Map Placeholder */}
-              <div className="map-placeholder animate-fade-up delay-400" id="map-placeholder">
-                <div className="map-placeholder__inner">
-                  <span className="map-pin">📍</span>
-                  <h4>Pairahan Design Consultants</h4>
-                  <p>Plot no 148, Upper Ground Floor, Pocket-2<br />Jasola, New Delhi - 110025</p>
-                  <a
-                    href="https://maps.google.com/?q=Jasola+New+Delhi+110025"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn btn-primary"
-                    style={{ marginTop: '1rem', fontSize: '0.9rem', padding: '0.8rem 2rem' }}
-                    id="open-maps-btn"
-                  >
-                    View on Google Maps
-                  </a>
-                </div>
-              </div>
             </div>
 
             {/* Form Panel */}
@@ -284,6 +265,49 @@ export default function Contact() {
                   </button>
                 </form>
               )}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ===== MAP SECTION ===== */}
+      <section className="section-sm" style={{ paddingTop: 0 }}>
+        <div className="container">
+          <div className="contact-map-row animate-fade-up">
+            {/* Location Info Card */}
+            <div className="location-info-card">
+              <span className="map-pin">📍</span>
+              <div className="location-info-content">
+                <h4>Office Location</h4>
+                <p>Plot no 148, Upper Ground Floor, Pocket-2,<br />Jasola, New Delhi - 110025</p>
+                <div style={{ marginTop: '1.5rem' }}>
+                  <a
+                    href="https://maps.google.com/?q=Jasola+New+Delhi+110025"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-primary"
+                    id="view-on-maps-link"
+                    style={{ width: 'auto', padding: '0.8rem 2rem' }}
+                  >
+                    Open in Google Maps
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Clean Map Container */}
+            <div className="map-container" id="map-container">
+              <iframe 
+                title="PDC Office Location"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.603348037307!2d77.28723377549791!3d28.55163147570954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce3ec95f66107%3A0x7d97607a7a505f56!2sJasola%2C%20New%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1713333333333!5m2!1sen!2sin"
+                width="100%" 
+                height="100%" 
+                style={{ border: 0 }} 
+                allowFullScreen="" 
+                loading="lazy" 
+                referrerPolicy="no-referrer-when-downgrade"
+                className="map-iframe"
+              ></iframe>
             </div>
           </div>
         </div>
