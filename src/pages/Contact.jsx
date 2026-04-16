@@ -87,7 +87,28 @@ export default function Contact() {
       setErrors(errs)
       return
     }
-    setSubmitted(true)
+
+    fetch("https://formspree.io/f/xqewpddb", {
+      method: "POST",
+      body: JSON.stringify(form),
+      headers: {
+        'Accept': 'application/json'
+      }
+    })
+      .then((response) => {
+        if (response.ok) {
+          setSubmitted(true)
+        } else {
+          response.json().then(data => {
+            if (Object.hasOwn(data, 'errors')) {
+              alert(data["errors"].map(error => error["message"]).join(", "))
+            } else {
+              alert("Oops! There was a problem submitting your form")
+            }
+          })
+        }
+      })
+      .catch(() => alert("Oops! There was a problem submitting your form"))
   }
 
   return (
