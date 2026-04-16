@@ -1,0 +1,208 @@
+.projects-filter {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+
+.filter-btn {
+  padding: 0.6rem 1.5rem;
+  border-radius: var(--radius-full);
+  border: 2px solid var(--color-border);
+  background: #fff;
+  font-family: var(--font-main);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--color-gray);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.filter-btn:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.filter-btn.active {
+  background: var(--gradient-green);
+  border-color: transparent;
+  color: #fff;
+  box-shadow: var(--shadow-green);
+}
+
+/* Grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+}
+
+.project-card {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: #fff;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border);
+  transition: var(--transition);
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+  border-color: transparent;
+}
+
+.project-card__visual {
+  height: 240px;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card__visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.project-card:hover .project-card__visual img {
+  transform: scale(1.1);
+}
+
+.project-card__category-badge {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  background: rgba(10, 50, 10, 0.65);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: var(--color-lime-bright);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 0.4rem 1rem;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(162, 209, 73, 0.2);
+  z-index: 2;
+}
+
+.project-card__body {
+  padding: 1.5rem;
+}
+
+.project-card__meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.project-card__type {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-primary);
+}
+
+.project-card__location {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.78rem;
+  color: var(--color-gray-light);
+}
+
+.project-card__location svg {
+  color: var(--color-gray-light);
+}
+
+.project-card__title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-dark);
+  margin-bottom: 0.65rem;
+  line-height: 1.3;
+}
+
+.project-card__desc {
+  font-size: 0.85rem;
+  line-height: 1.65;
+  color: var(--color-gray);
+  margin-bottom: 1.25rem;
+}
+
+.project-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.project-tag {
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-full);
+  background: rgba(46,125,50,0.08);
+  color: var(--color-primary);
+  border: 1px solid rgba(46,125,50,0.2);
+}
+
+/* Stats Banner */
+.projects-stats {
+  background: var(--gradient-dark);
+  padding: 4rem 0;
+}
+
+.projects-stats__inner {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+}
+
+.projects-stat {
+  text-align: center;
+  padding: 2rem;
+  border-right: 1px solid rgba(255,255,255,0.08);
+}
+
+.projects-stat:last-child {
+  border-right: none;
+}
+
+.projects-stat__icon {
+  display: block;
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.projects-stat__value {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--color-lime-bright);
+  line-height: 1;
+  margin-bottom: 0.4rem;
+}
+
+.projects-stat__label {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.55);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 500;
+}
+
+@media (max-width: 1024px) {
+  .projects-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .projects-grid { grid-template-columns: 1fr; }
+  .projects-stats__inner { grid-template-columns: repeat(2, 1fr); }
+  .projects-stat {
+    border-right: 1px solid rgba(255,255,255,0.08);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+}
